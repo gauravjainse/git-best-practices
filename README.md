@@ -67,9 +67,9 @@ If you use project management tools like JIRA or GitHub Issues, include the task
 
 Align with any existing team or company-specific branch naming conventions to maintain consistency.
 
----
-
----
+<p align="center">
+  <hr style="border: none; border-top: 1px solid #fd8c73; width: 100%;">
+</p>
 
 ## Backend Branch Names Best Practices
 
@@ -180,6 +180,153 @@ If your team follows a specific Git workflow (like Git Flow), ensure that your b
 - **Avoid Special Characters**: Do not use special characters or spaces in branch names; stick to alphanumeric characters and hyphens (`-`).
 
 By adhering to these practices, your Git workflow will be more efficient, collaborative, and scalable.
+
+<p align="center">
+  <hr style="border: none; border-top: 1px solid #fd8c73; width: 100%;">
+</p>
+
+# Best Practices for Writing Git Commit Messages
+
+Effective commit messages are vital for understanding the history of a project, simplifying collaboration, and maintaining a clean and organized repository. A well-structured commit message often follows a standard format with a **header**, **body**, and **footer**.
+
+---
+
+## Commit Message Format
+
+### 1. **Header**
+
+- Contains a concise description of the changes.
+- Limited to **50 characters** or fewer.
+- Written in **imperative mood** (e.g., "Fix," "Add," "Update").
+- No period at the end.
+
+**Example**:  
+`fix(ui): resolve issue with button alignment`
+
+### 2. **Body** (Optional but Recommended)
+
+- Provides additional details about the commit.
+- Explains **what**, **why**, and sometimes **how** of the changes.
+- Wrapped at **72 characters per line** for better readability.
+- Focus on **why the change was made**, not just what was changed.
+
+**Example**:
+
+```
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+```
+
+### 3. **Footer** (Optional)
+
+- Includes references to issues, tickets, or reviewers.
+- Follows specific conventions based on project or team requirements.
+
+**Example**:
+
+```
+Reviewed-by: John Doe
+Refs: #345
+```
+
+---
+
+## Commit Types (Conventional Commits)
+
+Use a prefix to categorize the purpose of the commit:
+
+| **Type**   | **Description**                                   | **Example**                       |
+| ---------- | ------------------------------------------------- | --------------------------------- |
+| `feat`     | Introduces a new feature                          | `feat(auth): add user login`      |
+| `fix`      | Fixes a bug                                       | `fix(ui): resolve button overlap` |
+| `chore`    | Non-functional changes (e.g., dependency updates) | `chore: update dependencies`      |
+| `docs`     | Documentation changes                             | `docs: update README`             |
+| `refactor` | Code refactoring without functional changes       | `refactor: optimize query`        |
+| `test`     | Adding or modifying tests                         | `test: add unit tests for login`  |
+| `style`    | Code style changes (e.g., formatting)             | `style: fix indentation`          |
+| `perf`     | Performance improvements                          | `perf: improve caching strategy`  |
+| `build`    | Changes to build process or tools                 | `build: add CI/CD configuration`  |
+
+---
+
+## Best Practices for Commit Messages
+
+### 1. Use **Imperative Mood**
+
+Write commit messages as if you're commanding the codebase to perform an action.
+
+- ✅ `fix: correct typo in the navbar`
+- ❌ `fixed a typo in the navbar`
+
+### 2. Make **Atomic Commits**
+
+Each commit should represent one logical change. Avoid bundling unrelated changes into a single commit.
+
+- ✅ Separate commits for fixing a bug and adding a feature.
+- ❌ A single commit for fixing a bug and updating documentation.
+
+### 3. Avoid Generic Messages
+
+Generic messages like "update code" or "fix issue" don't convey meaningful information. Be descriptive yet concise.
+
+### 4. Do Not Add Periods
+
+Avoid using periods at the end of commit messages. They're unnecessary in short, descriptive headers.
+
+### 5. Use a Consistent Style
+
+Follow a standard style guide for all commit messages within the team or organization.
+
+### 6. Avoid Commit Messages Like:
+
+- "WIP" (Work in Progress): Instead, use draft pull requests.
+- "Fixed stuff": Be explicit about the fix.
+- "Temp changes": Avoid committing temporary or debugging code.
+
+---
+
+## Examples of Good Commit Messages
+
+### Header Only
+
+`feat(dark-mode): implement dark mode for dashboard`
+
+### Header with Body
+
+```
+fix(validation): resolve issue with email validation
+
+Previously, the email validation logic failed to handle certain edge cases
+(e.g., emails with a '+' character). Updated the regex to correctly match
+valid email addresses.
+```
+
+### Header, Body, and Footer
+
+```
+feat(ui): add color converter utility
+
+Added a utility function to convert colors from hexadecimal to RGBA format.
+This helps standardize color handling across the app.
+
+Reviewed-by: John Doe
+Refs: #456
+```
+
+---
+
+## Benefits of Following Best Practices
+
+- Improved collaboration and understanding of the codebase.
+- Easier debugging and reverting changes when necessary.
+- Better integration with tools like Jira, GitHub, or GitLab for tracking.
+
+---
+
+By adhering to these guidelines, your Git commit history will be more meaningful, maintainable, and professional.
+
+---
 
 ## Author
 
