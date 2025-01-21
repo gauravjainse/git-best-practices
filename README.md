@@ -1,4 +1,4 @@
-# Git Branch Naming Convension and Commite Messages Best Practices
+# Git Branch Naming Convension and Commit Messages Best Practices
 
 ---
 
