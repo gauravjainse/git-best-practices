@@ -40,7 +40,7 @@ When creating branch names, it's important to follow industry standards that mak
 
 #### Chore/Tasks:
 
-- **Purpose**: For non-functional tasks like updating dependencies or refactoring code.
+- **Purpose**: For non-functional tasks like updating dependencies or update document.
 - **Format**: `chore/short-description`
 - **Example**: `chore/update-dependencies`
 
