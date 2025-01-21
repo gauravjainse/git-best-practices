@@ -67,10 +67,6 @@ If you use project management tools like JIRA or GitHub Issues, include the task
 
 Align with any existing team or company-specific branch naming conventions to maintain consistency.
 
-<p align="center">
-  <hr style="border: none; border-top: 1px solid #fd8c73; width: 100%;">
-</p>
-
 ## Backend Branch Names Best Practices
 
 When creating branch names for backend development, it’s essential to maintain clarity and consistency, just like with frontend projects. Here are some specific practices:
@@ -180,10 +176,6 @@ If your team follows a specific Git workflow (like Git Flow), ensure that your b
 - **Avoid Special Characters**: Do not use special characters or spaces in branch names; stick to alphanumeric characters and hyphens (`-`).
 
 By adhering to these practices, your Git workflow will be more efficient, collaborative, and scalable.
-
-<p align="center">
-  <hr style="border: none; border-top: 1px solid #fd8c73; width: 100%;">
-</p>
 
 # Best Practices for Writing Git Commit Messages
 
