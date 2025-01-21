@@ -2,6 +2,12 @@
 
 ---
 
+Adhering to Git branch naming conventions and commit message best practices is crucial for maintaining a clean, organized, and efficient version control system. It ensures that branches are easily identifiable, and the purpose of changes is clear. This consistency simplifies collaboration among team members, improves code navigation, and makes it easier to track project history.
+
+Ultimately, following these practices enhances productivity, reduces confusion, and streamlines the development process.
+
+Let’s break down branch naming practices in the context of both frontend and backend.
+
 ## Frontend Branch Names Best Practices
 
 When creating branch names, it's important to follow industry standards that make your branches easy to understand, manage, and collaborate on. Here are the best practices:
