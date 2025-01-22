@@ -1,0 +1,69 @@
+# Git Cheatsheet
+
+| **Category**                                                           | **Command**                                          | **Description**                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Initialization**                                                     | `git init`                                           | Initialize a new Git repository.                                           |
+|                                                                        | `git config --global user.name "Your Name"`          | Set the global username.                                                   |
+|                                                                        | `git config --global user.email "you@example.com"`   | Set the global email.                                                      |
+|                                                                        | `git config --global core.editor <editor>`           | Set the default editor for Git (e.g., vim, nano).                          |
+|                                                                        | `git config --list`                                  | View all global configurations.                                            |
+| **Note:** Use `--local` with config commands for local configurations. |                                                      |                                                                            |
+| **Cloning & Fetching**                                                 | `git clone <repository_url>`                         | Clone a remote repository.                                                 |
+|                                                                        | `git fetch`                                          | Fetch changes from the remote without merging.                             |
+|                                                                        | `git fetch origin <branch>`                          | Fetch specific branch changes from the remote.                             |
+|                                                                        | `git fetch --all`                                    | Fetch all branches from all remotes.                                       |
+| **Basic Workflow**                                                     | `git status`                                         | View the current working directory status.                                 |
+|                                                                        | `git add <file>`                                     | Stage changes for a specific file.                                         |
+|                                                                        | `git add .`                                          | Stage all changes in the current directory.                                |
+|                                                                        | `git commit -m "message"`                            | Commit staged changes with a message.                                      |
+|                                                                        | `git commit -am "message"`                           | Stage and commit all tracked changes with a message.                       |
+|                                                                        | `git push`                                           | Push changes to the remote repository.                                     |
+|                                                                        | `git push origin <branch>`                           | Push changes of a specific branch to the remote.                           |
+|                                                                        | `git pull`                                           | Pull changes from the remote repository.                                   |
+|                                                                        | `git pull --rebase`                                  | Pull changes and rebase the local commits on top of the remote.            |
+| **Branching & Merging**                                                | `git branch`                                         | List all local branches.                                                   |
+|                                                                        | `git branch <branch_name>`                           | Create a new branch.                                                       |
+|                                                                        | `git checkout <branch_name>`                         | Switch to a specific branch.                                               |
+|                                                                        | `git checkout -b <branch_name>`                      | Create and switch to a new branch.                                         |
+|                                                                        | `git merge <branch_name>`                            | Merge a branch into the current branch.                                    |
+|                                                                        | `git rebase <branch>`                                | Rebase the current branch onto another branch.                             |
+|                                                                        | `git branch -d <branch_name>`                        | Delete a local branch.                                                     |
+|                                                                        | `git branch -D <branch_name>`                        | Force-delete a local branch.                                               |
+|                                                                        | `git push origin --delete <branch_name>`             | Delete a remote branch.                                                    |
+| **Viewing History**                                                    | `git log`                                            | View the commit history.                                                   |
+|                                                                        | `git log --oneline`                                  | View a summarized commit history.                                          |
+|                                                                        | `git log --graph --oneline --all`                    | View a graphical representation of the commit history.                     |
+|                                                                        | `git show <commit_hash>`                             | View details of a specific commit.                                         |
+|                                                                        | `git blame <file>`                                   | View commit history for a specific file.                                   |
+| **Undo Changes**                                                       | `git reset <file>`                                   | Unstage changes for a specific file.                                       |
+|                                                                        | `git reset --hard`                                   | Discard all changes and reset to the last commit.                          |
+|                                                                        | `git revert <commit_hash>`                           | Create a new commit that undoes a specific commit.                         |
+|                                                                        | `git checkout <commit_hash> <file>`                  | Restore a specific file to a previous commit.                              |
+|                                                                        | `git restore <file>`                                 | Discard uncommitted changes for a file (preferred for newer Git versions). |
+|                                                                        | `git restore --staged <file>`                        | Unstage changes for a file.                                                |
+| **Stashing**                                                           | `git stash`                                          | Save uncommitted changes temporarily.                                      |
+|                                                                        | `git stash list`                                     | List all stashes.                                                          |
+|                                                                        | `git stash apply`                                    | Apply the latest stash.                                                    |
+|                                                                        | `git stash pop`                                      | Apply and remove the latest stash.                                         |
+|                                                                        | `git stash drop`                                     | Delete the latest stash.                                                   |
+| **Remote Commands**                                                    | `git remote add origin <repository_url>`             | Add a remote repository.                                                   |
+|                                                                        | `git remote -v`                                      | View remote repositories.                                                  |
+|                                                                        | `git remote rename <old_name> <new_name>`            | Rename a remote repository.                                                |
+|                                                                        | `git remote remove <remote_name>`                    | Remove a remote repository.                                                |
+| **Tags**                                                               | `git tag <tag_name>`                                 | Create a new tag.                                                          |
+|                                                                        | `git tag -a <tag_name> -m "message"`                 | Create an annotated tag with a message.                                    |
+|                                                                        | `git push origin <tag_name>`                         | Push a specific tag to the remote repository.                              |
+|                                                                        | `git push origin --tags`                             | Push all tags to the remote repository.                                    |
+|                                                                        | `git tag -d <tag_name>`                              | Delete a local tag.                                                        |
+|                                                                        | `git push origin --delete <tag_name>`                | Delete a remote tag.                                                       |
+| **Other Commands**                                                     | `git diff`                                           | View differences between changes.                                          |
+|                                                                        | `git diff --staged`                                  | View differences for staged changes.                                       |
+|                                                                        | `git clean -f`                                       | Remove untracked files.                                                    |
+|                                                                        | `git clean -fd`                                      | Remove untracked files and directories.                                    |
+|                                                                        | `git cherry-pick <commit_hash>`                      | Apply changes from a specific commit.                                      |
+|                                                                        | `git bisect`                                         | Perform binary search to find a commit that introduced a bug.              |
+| **Collaboration**                                                      | `git pull origin <branch>`                           | Fetch and merge changes from a remote branch.                              |
+|                                                                        | `git fetch origin <branch>`                          | Fetch changes from a remote branch without merging.                        |
+|                                                                        | `git push --force`                                   | Force push changes to a remote branch (use with caution).                  |
+| **Aliases**                                                            | `git config --global alias.<alias_name> '<command>'` | Create a Git command alias.                                                |
+|                                                                        | `git config --global alias.co 'checkout'`            | Example: Create an alias for `git checkout`.                               |
